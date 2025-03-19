@@ -88,3 +88,4 @@ def build(){
  // Testu izpildi “STG” vidē;
  // Būvējuma izvietošanu “PRD” vidē;
  // Testu izpildi “PRD” vidē;
+ 
