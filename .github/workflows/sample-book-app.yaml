@@ -14,6 +14,8 @@ jobs:
     - uses: actions/checkout@v4
     - name: Print step name
       run: echo "Building oh node application is starting..."
+    - name: Install all dependencies
+      run: npm install
   deploy-dev:
     runs-on: self-hosted
     needs: [build]
@@ -21,6 +23,12 @@ jobs:
     - uses: actions/checkout@v4
     - name: Print step name
       run: echo "Deployment to DEV has started..."
+    - name: Install all dependencies
+      run: npm install
+    - name: Delete existing pm2 service
+      run: pm2 delete "books-DEV"
+    - name: DRun sample-book-app pm2 service
+      run: pm2 start -n \"books-${environment}\" index.js -- 1010
   test-dev:
     runs-on: self-hosted
     needs: [deploy-dev]
