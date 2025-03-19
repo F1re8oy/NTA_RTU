@@ -9,9 +9,6 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-      - name: Clean checkout directory
-        run: |
-          rm -rf C:\Users\ronal\OneDrive\Documents\repos\NTA_RTU\actions-runner\_work\_actions\actions\checkout\v4
       - uses: actions/checkout@v4
       - name: Print step name
         run: echo "Building of node application is starting.."
