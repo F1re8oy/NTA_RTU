@@ -1,1 +1,1 @@
-## Šis repo ir kursam nepārtrauktā serveru automatizācija##
+## Šis repo ir kursam nepārtrauktā serveru automatizācija
