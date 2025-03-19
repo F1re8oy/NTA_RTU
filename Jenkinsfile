@@ -59,10 +59,10 @@ pipeline {
  // for windows: bat "npm.."
  // for linux/macos: sh "npm .."
  
- def build(){
-     echo "Building of node application is starting.."
-     bat "dir"
-     bat "npm install"
+def build(){
+    echo "Building of node application is starting.."
+    bat "dir"
+    bat "npm install"
      // sh "npm test"
  }
  
