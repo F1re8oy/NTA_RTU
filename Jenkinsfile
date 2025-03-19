@@ -72,6 +72,7 @@ def build(){
     withEnv(["PATH=C:\\Users\\ronal\\.npm-global;${env.PATH}"]) {
         bat "pm2 delete \"books-${environment}\" || exit 0"
         bat "pm2 start -n \"books-${environment}\" index.js -- ${port}"
+        bat "timeout /t 5"
     }
  }
  
