@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "F1re8oy/NTA_RTU",
+  "pipelineDirectory": "NTA_RTU",
+  "workspaceDirectory": "NTA_RTU\\NTA_RTU",
+  "repositories": {
+    "F1re8oy/NTA_RTU": {
+      "repositoryPath": "NTA_RTU\\NTA_RTU",
+      "lastRunOn": "03/19/2025 10:33:03 +02:00"
+    }
+  },
+  "lastRunOn": "03/19/2025 11:01:01 +02:00"
+}
