@@ -67,7 +67,7 @@ pipeline {
  
  def deploy(String environment, int port){
     echo "Deployment to ${environment} has started.."
-    git branch: 'jenkins_pipeline_windows', poll: false, url: 'https://github.com/mtararujs/sample-book-app.git'
+    git branch: 'jenkins_pipeline_windows', poll: false, url: 'https://github.com/F1re8oy/NTA_RTU.git'
     bat "npm install"
     bat "dir"
     bat "node_modules\\.bin\\pm2 delete \"books-${environment}\" || exit 0"
@@ -76,7 +76,7 @@ pipeline {
  
  def test(String test_set, String environment){
      echo "Testing ${test_set} test set on ${environment} has started.."
-     git branch: 'books_tests', poll: false, url: 'https://github.com/mtararujs/api-automation.git'
+     git branch: 'books_tests', poll: false, url: 'https://github.com/F1re8oy/api_automation.git'
      bat "npm install"
      bat "npm run ${test_set} ${test_set}_${environment}"
  }
