@@ -59,23 +59,19 @@ pipeline {
  // for windows: bat "npm.."
  // for linux/macos: sh "npm .."
  
-def build(){
-    echo "Building of node application is starting.."
-    bat "dir"
-    bat "npm install"
+ def build(){
+     echo "Building of node application is starting.."
+     bat "npm install"
      // sh "npm test"
  }
  
  def deploy(String environment, int port){
     echo "Deployment to ${environment} has started.."
-    git branch: 'jenkins_pipeline', poll: false, url: 'https://github.com/mtararujs/sample-book-app.git'
-    // bat "pm2 delete \"books-${environment}\" || exit 0"
-    // bat "pm2 start -n \"books-${environment}\" index.js -- ${port}"
-    withEnv(["PATH=C:\\Users\\ronal\\.npm-global;${env.PATH}"]) {
-        bat "pm2 delete \"books-${environment}\" || exit 0"
-        bat "pm2 start -n \"books-${environment}\" index.js -- ${port}"
-        // bat "ping -n 6 127.0.0.1 > nul"
-    }
+    git branch: 'jenkins_pipeline_windows', poll: false, url: 'https://github.com/mtararujs/sample-book-app.git'
+    bat "npm install"
+    bat "dir"
+    bat "node_modules\\.bin\\pm2 delete \"books-${environment}\" || exit 0"
+    bat "node_modules\\.bin\\pm2 start -n \"books-${environment}\" index.js -- ${port}"
  }
  
  def test(String test_set, String environment){
