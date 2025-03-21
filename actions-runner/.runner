@@ -1,6 +1,6 @@
 ﻿{
-  "agentId": 2,
-  "agentName": "MSI",
+  "agentId": 22,
+  "agentName": "runner2",
   "poolId": 1,
   "poolName": "Default",
   "serverUrl": "https://pipelinesghubeus26.actions.githubusercontent.com/6hEEo289HRLwsIAlscGssdCg9rbDyk1NCgP1jf6vK6ZuRIKeMf/",

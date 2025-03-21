@@ -1,9 +1,0 @@
-﻿{
-  "agentId": 2,
-  "agentName": "MSI",
-  "poolId": 1,
-  "poolName": "Default",
-  "serverUrl": "https://pipelinesghubeus26.actions.githubusercontent.com/6hEEo289HRLwsIAlscGssdCg9rbDyk1NCgP1jf6vK6ZuRIKeMf/",
-  "gitHubUrl": "https://github.com/F1re8oy/NTA_RTU",
-  "workFolder": "_work"
-}
